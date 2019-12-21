@@ -1,0 +1,37 @@
+<div class="page">
+  <div class="container" layout="column" layout-align="center">
+      <div class="">
+        <h1>Créez votre compte</h1>
+      </div>
+      <div class="">
+        <form>
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Email" [(ngModel)]="registerData.email" name="email" required>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Confirmez votre email</mat-label>
+            <input matInput type="email" placeholder="Login" [(ngModel)]="registerData.email2" name="email2" required>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Mot de passe</mat-label>
+            <input type="password" matInput placeholder="Mot de passe" [(ngModel)]="registerData.password" name="password" required>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Confirmez votre mot de passe</mat-label>
+            <input type="password" matInput placeholder="password" [(ngModel)]="registerData.password2" name="password" required>
+          </mat-form-field>
+
+          <p align="right">
+            <button (click) = "register()" mat-raised-button color="primary">Créer</button>
+          </p>
+        </form>
+      <div class="loginBottomText">
+        <a href="/login">Déjà un compte ?</a>
+      </div>
+    </div>
+  </div>
+</div>

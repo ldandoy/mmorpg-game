@@ -1,0 +1,19 @@
+<app-navbar-menu></app-navbar-menu>
+<div class="page">
+  <div class="container" layout="column" layout-align="center">
+    <div class="">
+      <h1>{{ place.label }}</h1>
+    </div>
+    <br />
+    <div class="">
+      <mat-card class="card" [class.selected]="wasClicked[pet.id]" (click)="selectPet(pet)" *ngFor="let pet of pets">
+        <mat-card-header>
+          <div mat-card-avatar class="card-header-image"></div>
+          <mat-card-title>{{ pet.name }}</mat-card-title>
+          <mat-card-subtitle>{{ pet.pol }} points de vie</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <app-play-place-medicare-action (selectedPetChanged)="selectedPetChangedHandler($event)" [selectedPet]="selectedPet" [wasClicked]="wasClicked"></app-play-place-medicare-action>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="page">
+  <div class="container" layout="column" layout-align="center">
+    <div class="">
+      <h1>Connexion</h1>
+    </div>
+    <div class="">
+      <form>
+        <mat-form-field>
+          <mat-label>Login</mat-label>
+          <input matInput placeholder="Login" [(ngModel)]="authData.email" name="email" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="password" [(ngModel)]="authData.password" name="password" required>
+        </mat-form-field>
+        <p align="right">
+          <button (click) = "auth()" mat-raised-button color="primary">Envoyer</button>
+        </p>
+      </form>
+      <div class="loginBottomText">
+        <a href="/register">Pas encore de compte ?</a>
+      </div>
+    </div>
+  </div>
+</div>

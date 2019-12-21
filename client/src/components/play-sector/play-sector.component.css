@@ -1,0 +1,41 @@
+.page {
+  background: url('/assets/img/bg-sector-1.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.mat-form-field {
+  color: #fff !important;
+  width: 100%;
+}
+
+mat-label {
+  color: #fff !important;
+}
+
+mat-form-field .mat-form-field-underline .mat-form-field-ripple {
+  background: #fff !important;
+}
+
+.loginBottomText {
+  text-align: center;
+}
+
+.loginBottomText a {
+  font-style: italic;
+  font-size: 0.7em;
+  color: #fff;
+}
+
+.card {
+  margin-bottom: 15px;
+}
+
+.card-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+h2 {
+  color: #fff;
+}

@@ -1,0 +1,21 @@
+<app-navbar-menu></app-navbar-menu>
+<div class="page">
+  <div class="container" layout="column" layout-align="center">
+    <div class="">
+      <h1>{{ sector.label }}</h1>
+    </div>
+    <br />
+    <div class="">
+      <mat-card class="card" (click) = "selectPlace(place)" *ngFor="let place of sector.places">
+        <mat-card-header>
+          <mat-card-title>{{ place.label }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            {{ place.description }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

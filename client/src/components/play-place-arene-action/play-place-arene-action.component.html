@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button *ngIf="selectedUser"  mat-menu-item (click)="fight()">
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon> Combattre
+    </button>
+
+    <button mat-menu-item (click)="goBack()">
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">backspace</mat-icon> Retour
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

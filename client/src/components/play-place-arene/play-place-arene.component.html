@@ -1,0 +1,19 @@
+<app-navbar-menu></app-navbar-menu>
+<div class="page">
+  <div class="container" layout="column" layout-align="center">
+    <div class="">
+      <h1>{{ place.label }}</h1>
+    </div>
+    <br />
+    <div class="">
+      <mat-card class="card" [class.selected]="wasClicked[user.id]" (click)="selectUser(user)" *ngFor="let user of users">
+        <mat-card-header>
+          <div mat-card-avatar class="card-header-image"></div>
+          <mat-card-title>{{ user.label }}</mat-card-title>
+          <mat-card-subtitle>Level {{ user.level }}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <app-play-place-arene-action (selectedUserChanged)="selectedUserChangedHandler($event)" [selectedUser]="selectedUser" [wasClicked]="wasClicked"></app-play-place-arene-action>
+  </div>
+</div>

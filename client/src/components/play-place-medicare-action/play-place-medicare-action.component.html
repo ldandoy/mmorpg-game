@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button *ngIf="selectedPet"  mat-menu-item (click)="treat()">
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon> Soigner
+    </button>
+
+    <button mat-menu-item (click)="goBack()">
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">backspace</mat-icon> Retour
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

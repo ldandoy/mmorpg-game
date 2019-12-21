@@ -1,0 +1,28 @@
+<div class="page">
+  <div class="container" layout="column" layout-align="center">
+    <div class="">
+      <h1>Choissiez votre animal</h1>
+    </div>
+    <br />
+    <div class="">
+      <form>
+        <h2>Choisir son nom</h2>
+        <mat-form-field>
+          <mat-label>Nom</mat-label>
+          <input matInput [(ngModel)]="petData.name" name="name" required>
+        </mat-form-field>
+        <h2>Selectionner sa categorie</h2>
+        <mat-card (click) = "selectPetCategory(pet)" class="card" *ngFor="let pet of petCategories">
+          <mat-card-header>
+            <div mat-card-avatar class="card-header-image"></div>
+            <mat-card-title>{{ pet.label }}</mat-card-title>
+            <mat-card-subtitle>{{ pet.description }}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+        <p align="right">
+          <button (click) = "choicePet()" mat-raised-button color="primary">Choisir</button>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Pet</span>
+    <!--button mat-button [matMenuTriggerFor]="menu">Menu</!--button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu -->
+    <span class="example-spacer"></span>
+
+    <button mat-button [matMenuTriggerFor]="menuUser"><mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">account_circle</mat-icon></button>
+    <mat-menu #menuUser="matMenu">
+      <button mat-menu-item>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">verified_user</mat-icon> Mon compte
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">highlight_off</mat-icon> Déconnection
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
